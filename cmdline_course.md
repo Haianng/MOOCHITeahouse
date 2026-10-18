@@ -3,232 +3,282 @@ layout: default
 title: Command Line Course
 ---
 
-# Command Line Course
+<div class="course-page">
 
-Welcome to my command line course notes. This page collects the main concepts, commands, and practical examples covered across four weekly modules.
+<section class="course-hero">
+  <p class="eyebrow">LEARN · EXPLORE · CREATE</p>
+  <h1>Command-Line Course</h1>
+  <p class="course-lead">
+    A practical guide to the tools behind everyday computing,
+    from navigating files to publishing a website.
+  </p>
+  <a class="moochi-button" href="{{ '/' | relative_url }}">Back to MOOCHI</a>
+</section>
 
-[Back to MOOCHI Teahouse]({{ '/' | relative_url }})
+<section class="course-intro">
+  <p class="eyebrow">THE COURSE</p>
+  <h2>Small commands, powerful tools.</h2>
+  <p>
+    These notes collect the main concepts, commands, and practical
+    examples covered across four weekly modules. Each module introduces
+    essential tools and reflects on how they can support everyday
+    computing and development work.
+  </p>
+</section>
 
----
+<section class="course-module">
+  <p class="eyebrow">WEEK 01</p>
+  <h2>Introduction to the Command Line</h2>
+  <p>
+    The command line provides a text-based way to interact with a
+    computer. This week focuses on navigating directories, managing
+    files, and learning basic commands.
+  </p>
 
-## Module 1: Introduction to the Command Line
+  <h3>Learning goals</h3>
+  <ul>
+    <li>Understand what the command line is and why it is useful.</li>
+    <li>Navigate directories and manage files.</li>
+    <li>Learn basic commands and command-line help.</li>
+  </ul>
 
-### Learning goals
+  <h3>Essential commands</h3>
+<table class="course-table">
+<thead><tr><th>Command</th><th>What it does</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>pwd</code></td><td>Prints the current working directory.</td><td><code>pwd</code></td></tr>
+<tr><td><code>ls</code></td><td>Lists files and directories.</td><td><code>ls -la</code></td></tr>
+<tr><td><code>cd</code></td><td>Changes directory.</td><td><code>cd Documents</code></td></tr>
+<tr><td><code>mkdir</code></td><td>Creates a directory.</td><td><code>mkdir practice</code></td></tr>
+<tr><td><code>touch</code></td><td>Creates an empty file.</td><td><code>touch notes.txt</code></td></tr>
+<tr><td><code>cp</code></td><td>Copies files.</td><td><code>cp notes.txt notes-backup.txt</code></td></tr>
+<tr><td><code>mv</code></td><td>Moves or renames files.</td><td><code>mv old.txt new.txt</code></td></tr>
+<tr><td><code>rm</code></td><td>Removes files.</td><td><code>rm old.txt</code></td></tr>
+</tbody></table>
+<h3>Example: create a practice folder</h3>
+  <table class="course-table">
+    <thead><tr><th>Command</th><th>Explanation</th></tr></thead>
+    <tbody>
+      <tr><td><code>mkdir command-line-practice</code></td><td>Creates a new practice directory.</td></tr>
+      <tr><td><code>cd command-line-practice</code></td><td>Moves into that directory.</td></tr>
+      <tr><td><code>touch notes.txt</code></td><td>Creates an empty text file.</td></tr>
+      <tr><td><code>pwd</code></td><td>Shows the current directory.</td></tr>
+      <tr><td><code>ls -la</code></td><td>Lists files, including hidden files.</td></tr>
+    </tbody>
+  </table>
+  <p class="course-explanation">
+    These commands demonstrate how several simple operations can be
+    combined into a practical workflow for creating and exploring files.
+  </p>
+  <blockquote>
+    Be careful with <code>rm</code>: deleted files may not be easy to
+    recover. Check the filename before running it.
+  </blockquote>
+  <p class="course-reflection">
+    <strong>Reflection.</strong> I learned how to navigate the filesystem
+    and manage files using commands instead of relying entirely on a
+    graphical interface.
+  </p>
+</section>
 
-- Understand what the command line is and why it is useful.
-- Navigate directories and manage files.
-- Learn basic commands and command-line help.
+<section class="course-module">
+  <p class="eyebrow">WEEK 02</p>
+  <h2>Text Processing</h2>
+  <p>
+    Text-processing tools help us read files, search for information,
+    filter results, and combine commands to work efficiently with text.
+  </p>
 
-### Essential commands
+  <h3>Useful commands</h3>
+<table class="course-table">
+<thead><tr><th>Command</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>cat</code></td><td>Displays file contents.</td><td><code>cat notes.txt</code></td></tr>
+<tr><td><code>less</code></td><td>Views a file page by page.</td><td><code>less notes.txt</code></td></tr>
+<tr><td><code>head</code></td><td>Shows the first lines.</td><td><code>head -n 5 notes.txt</code></td></tr>
+<tr><td><code>tail</code></td><td>Shows the last lines.</td><td><code>tail -n 5 notes.txt</code></td></tr>
+<tr><td><code>grep</code></td><td>Searches for matching text.</td><td><code>grep "error" log.txt</code></td></tr>
+<tr><td><code>wc</code></td><td>Counts lines, words, or bytes.</td><td><code>wc -l notes.txt</code></td></tr>
+<tr><td><code>sort</code></td><td>Sorts lines of text.</td><td><code>sort names.txt</code></td></tr>
+<tr><td><code>uniq</code></td><td>Removes adjacent duplicate lines.</td><td><code>sort names.txt | uniq</code></td></tr>
+</tbody></table>
+<h3>Searching and filtering</h3>
+  <table class="course-table">
+    <thead><tr><th>Command</th><th>Explanation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>grep -i "error" application.log</code></td>
+        <td>Finds lines containing “error”, regardless of letter case.</td>
+      </tr>
+      <tr>
+        <td><code>cat names.txt | sort | uniq</code></td>
+        <td>Displays the names, sorts them, and removes adjacent duplicates after sorting.</td>
+      </tr>
+      <tr>
+        <td><code>grep -i "error" application.log &gt; errors.txt</code></td>
+        <td>Writes matching lines to <code>errors.txt</code>, replacing its previous contents if it exists.</td>
+      </tr>
+      <tr>
+        <td><code>grep -i "error" application.log &gt;&gt; errors.txt</code></td>
+        <td>Appends matching lines to the end of the file.</td>
+      </tr>
+    </tbody>
+  </table>
 
-| Command | What it does | Example |
-|---|---|---|
-| `pwd` | Prints the current working directory | `pwd` |
-| `ls` | Lists files and directories | `ls -la` |
-| `cd` | Changes directory | `cd Documents` |
-| `mkdir` | Creates a directory | `mkdir practice` |
-| `touch` | Creates an empty file | `touch notes.txt` |
-| `cp` | Copies files | `cp notes.txt notes-backup.txt` |
-| `mv` | Moves or renames files | `mv old.txt new.txt` |
-| `rm` | Removes files | `rm old.txt` |
+  <p class="course-explanation">
+    A pipe (<code>|</code>) passes one command's output to another.
+    Redirection with <code>&gt;</code> writes output to a file, while
+    <code>&gt;&gt;</code> appends output.
+  </p>
 
-### Example: create a practice folder
+  <p class="course-reflection">
+    <strong>Reflection.</strong> I learned that combining small tools
+    makes it easier to search, filter, and organize large amounts of
+    text without manually opening every file.
+  </p>
+</section>
 
-```bash
-mkdir command-line-practice
-cd command-line-practice
-touch notes.txt
-pwd
-ls -la
-```
+<section class="course-module">
+  <p class="eyebrow">WEEK 03</p>
+  <h2>Scripts, Configuration, and Installation</h2>
+  <p>
+    Shell scripts group commands into reusable workflows. Configuration
+    files and environment variables help programs determine how to run,
+    while package managers simplify software installation.
+  </p>
 
-**Explanation:** `mkdir` creates a directory, `cd` enters it, and `touch` creates an empty file. `pwd` shows where you are, while `ls -la` lists files, including hidden ones.
-
-> Be careful with `rm`: deleted files may not be easy to recover. Check the filename before running it.
-
----
-
-## Module 2: Text Processing
-
-### Learning goals
-
-- Read and search text files.
-- Filter and transform command output.
-- Combine commands using pipes and redirection.
-
-### Useful commands
-
-| Command | Purpose | Example |
-|---|---|---|
-| `cat` | Displays file contents | `cat notes.txt` |
-| `less` | Views a file page by page | `less notes.txt` |
-| `head` | Shows the first lines | `head -n 5 notes.txt` |
-| `tail` | Shows the last lines | `tail -n 5 notes.txt` |
-| `grep` | Searches for matching text | `grep "error" log.txt` |
-| `wc` | Counts lines, words, or bytes | `wc -l notes.txt` |
-| `sort` | Sorts lines of text | `sort names.txt` |
-| `uniq` | Removes adjacent duplicate lines | `sort names.txt \| uniq` |
-
-### Example: search a log file
-
-```bash
-grep -i "error" application.log
-```
-
-**Explanation:** `grep` finds lines matching a pattern. The `-i` option makes the search case-insensitive, so it can match `ERROR`, `Error`, or `error`.
-
-### Example: use a pipe
-
-```bash
-cat names.txt | sort | uniq
-```
-
-**Explanation:** The pipe symbol (`|`) sends one command's output to the next command. Here, the names are displayed, sorted, and then deduplicated.
-
-### Example: redirect output
-
-```bash
-grep -i "error" application.log > errors.txt
-```
-
-**Explanation:** The `>` symbol sends output into `errors.txt`, creating the file or replacing its previous contents. Use `>>` to append instead.
-
----
-
-## Module 3: Scripts, Configuration, and Installation
-
-### Learning goals
-
-- Understand shell scripts and executable permissions.
-- Work with configuration files and environment variables.
-- Install software using the appropriate package manager.
-
-### Example: a simple shell script
-
-Create a file named `hello.sh`:
-
-```bash
-#!/bin/bash
-
+  <h3>Example: a simple shell script</h3>
+  <p>Create a file called <code>hello.sh</code> containing:</p>
+  <table class="course-table">
+    <thead><tr><th>Script code</th><th>Explanation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><pre><code>#!/bin/bash
 echo "Hello from the command line!"
 date
-pwd
-```
+pwd</code></pre></td>
+        <td>The first line identifies Bash as the interpreter. The remaining lines print a message, display the date, and show the current directory.</td>
+      </tr>
+    </tbody>
+  </table>
 
-Run it with:
+  <h3>Running a script</h3>
+  <table class="course-table">
+    <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>bash hello.sh</code></td><td>Runs the script using Bash.</td></tr>
+      <tr><td><code>chmod +x hello.sh</code></td><td>Adds execute permission to the file.</td></tr>
+      <tr><td><code>./hello.sh</code></td><td>Runs the executable script from the current directory.</td></tr>
+    </tbody>
+  </table>
 
-```bash
-bash hello.sh
-```
+  <h3>Environment variables</h3>
+  <table class="course-table">
+    <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>echo "$HOME"</code></td><td>Displays the home directory path.</td></tr>
+      <tr><td><code>echo "$PATH"</code></td><td>Displays the directories searched when looking for commands.</td></tr>
+      <tr><td><code>COURSE_NAME="Command Line Course"</code></td><td>Defines a variable in the current shell session.</td></tr>
+      <tr><td><code>echo "$COURSE_NAME"</code></td><td>Prints the variable's value.</td></tr>
+    </tbody>
+  </table>
 
-Or make it executable:
+  <h3>Configuration and installation</h3>
+  <table class="course-table">
+    <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>brew --version</code></td><td>Checks whether Homebrew is available and displays its version.</td></tr>
+      <tr><td><code>brew install tree</code></td><td>Installs the <code>tree</code> utility using Homebrew.</td></tr>
+    </tbody>
+  </table>
+  <p class="course-explanation">
+    Configuration files control how programs behave. Their locations
+    depend on the operating system and application. On macOS, Homebrew
+    is one option for installing software, if it is already installed.
+    Otherwise, follow its official setup instructions first.
+  </p>
 
-```bash
-chmod +x hello.sh
-./hello.sh
-```
+  <p class="course-reflection">
+    <strong>Reflection.</strong> I learned how scripts make repeated
+    tasks easier to run and how environment variables and configuration
+    settings affect the command-line environment.
+  </p>
+</section>
 
-**Explanation:** The first line identifies the interpreter. Each subsequent line runs a command. `chmod +x` adds execute permission, allowing the script to be launched directly.
+<section class="course-module">
+  <p class="eyebrow">WEEK 04</p>
+  <h2>Processes, SSH, and Git</h2>
+  <p>
+    This module introduces process management, remote access, and
+    version control. These tools are useful for troubleshooting,
+    connecting to other computers, and managing software projects.
+  </p>
 
-### Environment variables
+  <h3>Process commands</h3>
+<table class="course-table">
+<thead><tr><th>Command</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>ps</code></td><td>Lists processes.</td><td><code>ps aux</code></td></tr>
+<tr><td><code>top</code></td><td>Displays live process information.</td><td><code>top</code></td></tr>
+<tr><td><code>kill</code></td><td>Sends a signal to a process.</td><td><code>kill PID</code></td></tr>
+<tr><td><code>jobs</code></td><td>Lists jobs in the current shell.</td><td><code>jobs</code></td></tr>
+</tbody></table>
+<h3>Connecting with SSH</h3>
+  <table class="course-table">
+    <thead><tr><th>Command</th><th>Explanation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>ssh username@server.example.com</code></td>
+        <td>Opens an encrypted connection to a remote computer. Replace the example username and hostname with the details provided by your service.</td>
+      </tr>
+      <tr>
+        <td><code>ssh-keygen -t ed25519</code></td>
+        <td>Generates an Ed25519 SSH key pair. Keep the private key secret and share only the public key when requested.</td>
+      </tr>
+    </tbody>
+  </table>
 
-```bash
-echo "$HOME"
-echo "$PATH"
-```
+  <h3>Essential Git commands</h3>
+  <table class="course-table">
+    <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>git status</code></td><td>Shows changed and untracked files.</td></tr>
+      <tr><td><code>git add cmdline_course.md</code></td><td>Stages the course file for a commit.</td></tr>
+      <tr><td><code>git commit -m "Add command line course notes"</code></td><td>Records staged changes in the repository history.</td></tr>
+      <tr><td><code>git log --oneline</code></td><td>Shows a compact commit history.</td></tr>
+      <tr><td><code>git switch -c cmdline-course</code></td><td>Creates and switches to a new branch named <code>cmdline-course</code>.</td></tr>
+    </tbody>
+  </table>
 
-**Explanation:** `$HOME` usually points to your home directory. `$PATH` lists directories that the shell searches when you run a command.
+  <p class="course-explanation">
+    A separate Git branch allows development to happen independently
+    before changes are merged into the main branch.
+  </p>
 
-To define a variable for the current shell session:
+  <p class="course-reflection">
+    <strong>Reflection.</strong> I learned how to inspect running
+    processes, understand remote connections, and use Git to track
+    changes and organize development work.
+  </p>
+</section>
 
-```bash
-COURSE_NAME="Command Line Course"
-echo "$COURSE_NAME"
-```
+<section class="course-summary">
+  <p class="eyebrow">LOOKING BACK</p>
+  <h2>From commands to confidence.</h2>
+  <p>
+    Across these four modules, I learned how to navigate the command
+    line, process text, write simple scripts, inspect processes,
+    connect to remote systems, and manage changes with Git. Practising
+    these tools helps build confidence with everyday development tasks.
+  </p>
 
-### Configuration and installation
+  <h3>Further practice</h3>
+  <ol>
+    <li>Create a folder and several text files.</li>
+    <li>Search the files with <code>grep</code>.</li>
+    <li>Write a shell script that prints the date and current directory.</li>
+    <li>Create a Git branch and inspect changes with <code>git status</code>.</li>
+  </ol>
+</section>
 
-Configuration files control how programs behave. They may be stored in your home directory or in application-specific locations.
-
-Before installing software, identify your operating system and follow the software's official installation instructions. For example, macOS users may use Homebrew if it is installed:
-
-```bash
-brew --version
-brew install tree
-```
-
-**Explanation:** The first command checks whether Homebrew is available. The second installs the `tree` utility through Homebrew. If Homebrew isn't installed, follow its official setup instructions first.
-
----
-
-## Module 4: Processes, SSH, and Git
-
-### Learning goals
-
-- Inspect and manage running processes.
-- Understand remote access using SSH.
-- Use Git to track changes and collaborate on projects.
-
-### Process commands
-
-| Command | Purpose | Example |
-|---|---|---|
-| `ps` | Lists processes | `ps aux` |
-| `top` | Displays live process information | `top` |
-| `kill` | Sends a signal to a process | `kill PID` |
-| `jobs` | Lists jobs in the current shell | `jobs` |
-
-**Explanation:** A process ID (PID) identifies a running process. Replace `PID` with the actual number when using `kill`. Try normal termination before considering stronger signals.
-
-### Connecting with SSH
-
-```bash
-ssh username@server.example.com
-```
-
-**Explanation:** SSH creates an encrypted connection to a remote computer. Replace the example username and hostname with the details provided by your system administrator or service.
-
-To create an SSH key pair:
-
-```bash
-ssh-keygen -t ed25519
-```
-
-**Explanation:** This generates an Ed25519 key pair. Keep the private key secret; only share the public key when a service asks for it.
-
-### Essential Git commands
-
-```bash
-git status
-git add cmdline_course.md
-git commit -m "Add command line course notes"
-git log --oneline
-```
-
-**Explanation:**
-
-- `git status` shows changed and untracked files.
-- `git add` stages a file for the next commit.
-- `git commit` records the staged changes.
-- `git log --oneline` shows a compact commit history.
-
-### Example: working with a branch
-
-```bash
-git switch -c cmdline-course
-```
-
-This creates and switches to a branch named `cmdline-course`. A separate branch lets you develop the course page without making changes directly on the main development branch.
-
----
-
-## Summary
-
-Across these four modules, I learned how to navigate the command line, process text, write simple scripts, inspect processes, connect to remote systems, and manage changes with Git. Practising these commands helps build confidence with everyday development tasks.
-
-## Further practice
-
-1. Create a folder and several text files.
-2. Search the files with `grep`.
-3. Write a shell script that prints the date and current directory.
-4. Create a Git branch and inspect the changes with `git status`.
+</div>
