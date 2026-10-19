@@ -70,15 +70,17 @@ title: MOOCHI Teahouse
 
   <img
     class="moochi-profile-image"
-    src="{{ '/assets/images/study-photo.jpg' | relative_url }}"
+    src="{{ '/assets/images/moochi-reading.jpg' | relative_url }}"
     alt="A quiet study moment with a laptop, coffee, and a book">
 
+    <h2 class="moochi-name">Thi Hai An Nguyen</h2>
+
   <p>
-    I'm Thi Hai An Nguyen, a General Linguistics student at the
-    University of Helsinki, studying Linguistic Diversity and Digital
-    Humanities. I'm interested in languages, photography, and the
-    connections between language and culture. I'm also exploring coding
-    and web development through the MOOCHI Teahouse project.
+    I'm a General Linguistics student at the University of Helsinki,
+    studying Linguistic Diversity and Digital Humanities. I'm interested
+    in languages, photography, and the connections between language and
+    culture. I'm also exploring coding and web development through the
+    MOOCHI Teahouse project.
   </p>
 
   <p>
