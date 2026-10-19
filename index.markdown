@@ -109,5 +109,50 @@ title: MOOCHI Teahouse
       <p>Notes and practical examples covering command-line tools, text processing, scripting, Git, and web publishing.</p>
       <a href="{{ '/cmdline_course.html' | relative_url }}">Read the course notes ↗</a>
     </article>
+
+    <article class="tea-card">
+      <p class="tea-number">03 / UNIVERSITY STUDIES</p>
+      <h3>Courses I've Taken</h3>
+      <p>My studies explore sociolinguistics, linguistic diversity, Finnish, and language technology.</p>
+      <a href="#university-courses">View university courses ↗</a>
+    </article>
   </div>
+</section>
+
+<section class="moochi-teas" id="university-courses">
+  <p class="eyebrow">MY ACADEMIC JOURNEY</p>
+  <h2>Courses I've Taken.</h2>
+  <p>Selected courses at the University of Helsinki related to language, linguistics, and digital humanities.</p>
+
+  <div class="tea-grid">
+  <article class="tea-card">
+    <h3>Command Line Tools for Linguists</h3>
+    <p class="tea-number">KIK-LG221</p>
+    <a href="https://studies.helsinki.fi/courses/course-implementation/hy-opt-cur-2627-261401a1-c550-4436-91b9-7edf4a1a3b57/KIK-LG221">View course ↗</a>
+  </article>
+
+  <article class="tea-card">
+    <h3>Finnish 1</h3>
+    <p class="tea-number">SUO-010</p>
+    <a href="https://studies.helsinki.fi/courses/course-implementation/otm-7c2e7884-e91f-4667-894e-7bd913a70916/SUO-010">View course ↗</a>
+  </article>
+
+  <article class="tea-card">
+    <h3>Introduction to Language Technology</h3>
+    <p class="tea-number">KIK-405</p>
+    <a href="https://studies.helsinki.fi/courses/course-implementation/hy-opt-cur-2627-43b8f122-8ca2-453b-addd-cbfd756c3306/KIK-405">View course ↗</a>
+  </article>
+
+  <article class="tea-card">
+    <h3>Introduction to Linguistic Diversity and Digital Humanities</h3>
+    <p class="tea-number">LDA-301</p>
+    <a href="https://studies.helsinki.fi/courses/course-implementation/hy-opt-cur-2627-9df97501-21e6-4b8d-9de4-e91303f2ff71/LDA-301">View course ↗</a>
+  </article>
+
+  <article class="tea-card">
+    <h3>Sociolinguistics</h3>
+    <p class="tea-number">LDA-L309</p>
+    <a href="https://studies.helsinki.fi/courses/course-implementation/hy-opt-cur-2627-7404bbaf-0333-4da4-ad88-b967d8f7f354">View course ↗</a>
+  </article>
+</div>
 </section>
