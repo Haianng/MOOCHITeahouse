@@ -26,6 +26,11 @@ title: Command Line Course
   </p>
 </section>
 
+<figure style="margin: 2rem 0;">
+  <img src="{{ '/assets/images/study-photo.jpg' | relative_url }}" alt="A quiet study moment with a laptop, coffee, and a book" style="display: block; width: 100%; max-width: 720px; height: auto; margin: 0 auto; border-radius: 8px;">
+  <figcaption style="text-align: center; color: #667783; font-size: 0.9rem; margin-top: 0.75rem;">A quiet moment for learning and exploring new tools.</figcaption>
+</figure>
+
 <section class="course-module">
   <p class="eyebrow">WEEK 01</p>
   <h2>Introduction to the Command Line</h2>
